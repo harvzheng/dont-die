@@ -1,49 +1,30 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal Starter
-</h1>
+# Don't Die Prototype
 
-## 🚀 Quick start
+*By G/A Augustin, Yifei Chen, Jennie Lee, Proud Taranat, and Harvey Zheng*
 
-1.  **Create a Gatsby site.**
+![image of a note from david wolinsky](img/cover.png "Don't Die Cover")
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+This repository is a demo of the interview page for our redesign of [Don't Die](https://nodontdie.com/). Built in React.js, this demo features a sample interview with a text size changer, as well as a color changer component.
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+## Installation
 
-2.  **Start developing.**
+To download the repo, run:
 
-    Navigate into your new site’s directory and start it up.
+```git clone https://github.com/harvzheng/dont-die.git && cd dont-die```
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+After, to install the necessary components run:
 
-3.  **Open the code and start customizing!**
+```npm install```
 
-    Your site is now running at http://localhost:8000!
+To run the site with Gatsby, use
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+``` npm run start```
 
-4.  **Learn more**
+## Components
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+The repository features a component, found in `components/color.js`
 
-## 🚀 Quick start (Netlify)
+To use it, use:
+`<ColorChanger color1="#FFFFFF" color2="#000000"/>`
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
-
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal)
+where `color1` is the color of the background, and `color2` is the color of the text.

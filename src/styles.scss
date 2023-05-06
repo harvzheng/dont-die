@@ -48,8 +48,8 @@ $font-size-list: "";
 }
 .title {
   display: flex;
-  // position: fixed;
-  // width: 22VW;
+  position: fixed;
+  width: 22VW;
   flex-direction: column;
   .name {
     font-weight: 900;
