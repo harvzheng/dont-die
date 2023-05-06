@@ -1,0 +1,112 @@
+@function pxToRem($pxSize) {
+  @return calc($pxSize / 16) + rem;
+}
+$start: 24;
+$end: 64;
+
+$font-size-list: "";
+
+// array[1] = "", so $start + 1 to later set `""` to $start
+@for $i from $start + 1 through $end {
+  $font-size-list: append($font-size-list, $i, comma);
+
+  //set `""` to $start
+  $font-size-list: set-nth($font-size-list, 1, $start);
+}
+
+@mixin font-size() {
+
+  @each $value in $font-size-list {
+    .font-size-#{$value} {
+      .quote {
+        font-size: pxToRem($value);
+      }
+      .name {
+        font-size: pxToRem(calc($value*4/5));
+      }
+    }
+  }
+}
+
+@include font-size();
+
+.line {
+  display: flex;
+  flex-direction: row;
+  padding: 18px 0;
+  .name {
+    text-align: end;
+    padding: 0 24px;
+    flex: 0 0 5em;
+  }
+  .quote {
+    p {
+      margin-top: 0px;
+      margin-bottom: 12px;
+    }
+  }
+}
+.title {
+  display: flex;
+  // position: fixed;
+  // width: 22VW;
+  flex-direction: column;
+  .name {
+    font-weight: 900;
+    padding-bottom: 24px;
+    padding-top: 0px;
+    font-size: 42px;
+  }
+  .text-padding {
+    padding: 18px 0;
+  }
+  .text-slider {
+    display: flex;
+    align-items: center;
+    .rc-slider {
+      margin-left: 18px;
+    }
+  }
+}
+.interview {
+  margin: 96px 0px 96px 48px;
+  margin-left: 22VW;
+}
+main {
+  display: flex;
+  padding: 36px;
+}
+
+.caption-text {
+  font-size: 24px
+}
+
+.summary {
+  a{
+    color: black;
+  }
+  a:hover {
+    color: #878787;
+    transition: linear 0.2s
+  }
+}
+.colors {
+  .color-chooser {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid black;
+    margin-right: 6px;
+  }
+  padding-top: 8px;
+}
+
+.sidebar-collapsed {
+  width: 60px;
+  transition: width 0.3s ease-in-out;
+}
+
+.sidebar-expanded {
+  width: 22VW;
+}
