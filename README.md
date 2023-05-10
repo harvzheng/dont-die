@@ -23,7 +23,7 @@ To run the site with Gatsby, use
 
 ```npm run start```
 
-*The actual page is located at `[http://localhost:8000/interview](http://localhost:8000/interview/)`
+*The actual page is located at `http://localhost:8000/interview`
 
 ## Components
 
